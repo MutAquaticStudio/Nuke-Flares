@@ -1,0 +1,118 @@
+{
+  "name": "Vintage Lens",
+  "glow": [
+    {
+      "radius": 0.018,
+      "intensity": 4.0,
+      "color": [
+        1.0,
+        0.95,
+        0.85
+      ],
+      "halo": 0.0
+    },
+    {
+      "radius": 0.08,
+      "intensity": 0.6,
+      "color": [
+        1.0,
+        0.75,
+        0.45
+      ],
+      "halo": 0.05
+    }
+  ],
+  "streak": {
+    "length": 0.25,
+    "thickness": 0.006,
+    "intensity": 0.7,
+    "color": [
+      1.0,
+      0.8,
+      0.5
+    ]
+  },
+  "ghosts": [
+    {
+      "pos": 0.2,
+      "size": 0.025,
+      "intensity": 0.3,
+      "color": [
+        1.0,
+        0.8,
+        0.5
+      ],
+      "softness": 0.2
+    },
+    {
+      "pos": 0.45,
+      "size": 0.06,
+      "intensity": 0.2,
+      "color": [
+        0.9,
+        0.6,
+        0.3
+      ],
+      "shape": "ring",
+      "width": 0.1
+    },
+    {
+      "pos": 0.7,
+      "size": 0.04,
+      "intensity": 0.25,
+      "color": [
+        0.5,
+        0.8,
+        0.6
+      ],
+      "softness": 0.2
+    },
+    {
+      "pos": 0.95,
+      "size": 0.09,
+      "intensity": 0.15,
+      "color": [
+        1.0,
+        0.5,
+        0.3
+      ],
+      "shape": "ring",
+      "width": 0.07
+    },
+    {
+      "pos": 1.2,
+      "size": 0.05,
+      "intensity": 0.2,
+      "color": [
+        0.7,
+        0.5,
+        0.9
+      ],
+      "softness": 0.25
+    },
+    {
+      "pos": 1.5,
+      "size": 0.14,
+      "intensity": 0.12,
+      "color": [
+        1.0,
+        0.7,
+        0.4
+      ],
+      "softness": 0.4,
+      "rim": 0.5
+    },
+    {
+      "pos": 1.8,
+      "size": 0.08,
+      "intensity": 0.14,
+      "color": [
+        0.6,
+        0.9,
+        0.7
+      ],
+      "shape": "ring",
+      "width": 0.09
+    }
+  ]
+}

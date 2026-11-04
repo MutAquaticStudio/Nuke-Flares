@@ -1,0 +1,93 @@
+{
+  "name": "Hard Sun Pentagon",
+  "glow": [
+    {
+      "radius": 0.014,
+      "intensity": 7.0,
+      "color": [
+        1.0,
+        1.0,
+        0.9
+      ],
+      "halo": 0.0
+    },
+    {
+      "radius": 0.07,
+      "intensity": 0.9,
+      "color": [
+        1.0,
+        0.85,
+        0.55
+      ],
+      "halo": 0.08
+    }
+  ],
+  "starburst": {
+    "rays": 16,
+    "length": 0.5,
+    "intensity": 1.1,
+    "color": [
+      1.0,
+      0.95,
+      0.8
+    ],
+    "sharp": 500,
+    "seed": 6
+  },
+  "ghosts": [
+    {
+      "pos": 0.35,
+      "size": 0.04,
+      "intensity": 0.3,
+      "color": [
+        1.0,
+        0.9,
+        0.6
+      ],
+      "shape": "poly",
+      "sides": 5,
+      "softness": 0.18
+    },
+    {
+      "pos": 0.7,
+      "size": 0.065,
+      "intensity": 0.22,
+      "color": [
+        0.6,
+        0.9,
+        1.0
+      ],
+      "shape": "poly",
+      "sides": 5,
+      "softness": 0.18,
+      "rim": 0.6
+    },
+    {
+      "pos": 1.05,
+      "size": 0.045,
+      "intensity": 0.25,
+      "color": [
+        1.0,
+        0.7,
+        0.5
+      ],
+      "shape": "poly",
+      "sides": 5,
+      "softness": 0.18
+    },
+    {
+      "pos": 1.5,
+      "size": 0.11,
+      "intensity": 0.14,
+      "color": [
+        0.8,
+        1.0,
+        0.7
+      ],
+      "shape": "poly",
+      "sides": 5,
+      "softness": 0.22,
+      "rim": 0.5
+    }
+  ]
+}

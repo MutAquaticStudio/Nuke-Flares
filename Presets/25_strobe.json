@@ -1,0 +1,64 @@
+{
+  "name": "Strobe (animated)",
+  "glow": [
+    {
+      "radius": 0.015,
+      "intensity": 6.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "halo": 0.0
+    },
+    {
+      "radius": 0.08,
+      "intensity": 1.0,
+      "color": [
+        0.9,
+        0.95,
+        1.0
+      ],
+      "halo": 0.1
+    }
+  ],
+  "streak": {
+    "length": 0.5,
+    "thickness": 0.005,
+    "intensity": 2.0,
+    "color": [
+      0.9,
+      0.95,
+      1.0
+    ]
+  },
+  "ghosts": [
+    {
+      "pos": 0.6,
+      "size": 0.06,
+      "intensity": 0.2,
+      "color": [
+        0.8,
+        0.9,
+        1.0
+      ],
+      "softness": 0.3
+    },
+    {
+      "pos": 1.1,
+      "size": 0.1,
+      "intensity": 0.15,
+      "color": [
+        1.0,
+        0.9,
+        0.9
+      ],
+      "softness": 0.4
+    }
+  ],
+  "animation": {
+    "flicker": 0.85,
+    "flicker_speed": 0.55,
+    "ghost_flicker": 0.5
+  }
+}

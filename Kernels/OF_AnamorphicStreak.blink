@@ -1,0 +1,75 @@
+// OpenFlares - Anamorphic Streak (Blink Script, Nuke 14+)
+// Bright-pass -> one-dimensional directional blur with exponential falloff,
+// tinted and added over the source. Written from scratch.
+
+kernel OF_AnamorphicStreak : ImageComputationKernel<ePixelWise>
+{
+  Image<eRead, eAccessRandom, eEdgeClamped> src;
+  Image<eWrite, eAccessPoint> dst;
+
+  param:
+    float threshold;     // luminance where the streak starts
+    float knee;          // softness of the threshold
+    float streakLength;  // half length in pixels
+    float falloff;       // how fast the streak fades with distance
+    float angle;         // degrees, 0 = horizontal
+    float3 tint;         // streak colour
+    float gain;          // streak intensity
+    int   samples;       // samples per side
+    bool  streakOnly;    // output the streak without the source
+
+  void define()
+  {
+    defineParam(threshold,    "Threshold",     1.0f);
+    defineParam(knee,         "Knee",          0.5f);
+    defineParam(streakLength, "Length",        300.0f);
+    defineParam(falloff,      "Falloff",       3.0f);
+    defineParam(angle,        "Angle",         0.0f);
+    defineParam(tint,         "Tint",          float3(0.55f, 0.75f, 1.0f));
+    defineParam(gain,         "Gain",          1.0f);
+    defineParam(samples,      "Samples",       64);
+    defineParam(streakOnly,   "Streak Only",   false);
+  }
+
+  float3 brightPass(float4 c)
+  {
+    float luma = c.x * 0.2126f + c.y * 0.7152f + c.z * 0.0722f;
+    float k = max(luma - threshold + knee, 0.0f);
+    k = min(k, 2.0f * knee) ;
+    float soft = (knee > 0.0001f) ? (k * k) / (4.0f * knee + 0.0001f) : 0.0f;
+    float hard = max(luma - threshold, 0.0f);
+    float amount = max(soft, hard);
+    float scale = amount / max(luma, 0.0001f);
+    return float3(c.x * scale, c.y * scale, c.z * scale);
+  }
+
+  void process(int2 pos)
+  {
+    float rad = angle * 3.14159265f / 180.0f;
+    float2 dir = float2(cos(rad), sin(rad));
+    int n = max(samples, 1);
+
+    float3 acc = float3(0.0f, 0.0f, 0.0f);
+    float wsum = 0.0f;
+
+    for (int i = -n; i <= n; i++) {
+      float t = float(i) / float(n);              // -1 .. 1
+      float w = exp(-falloff * fabs(t));
+      int x = pos.x + int(floor(dir.x * t * streakLength + 0.5f));
+      int y = pos.y + int(floor(dir.y * t * streakLength + 0.5f));
+      float4 s = src(x, y);
+      float3 b = brightPass(s);
+      acc += b * w;
+      wsum += w;
+    }
+
+    acc = acc / max(wsum, 0.0001f);
+    acc = float3(acc.x * tint.x, acc.y * tint.y, acc.z * tint.z) * gain * (streakLength / 100.0f);
+
+    float4 orig = src(pos.x, pos.y);
+    float4 result = streakOnly
+      ? float4(acc.x, acc.y, acc.z, orig.w)
+      : float4(orig.x + acc.x, orig.y + acc.y, orig.z + acc.z, orig.w);
+    dst() = result;
+  }
+};

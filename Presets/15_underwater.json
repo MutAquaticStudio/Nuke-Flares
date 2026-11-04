@@ -1,0 +1,84 @@
+{
+  "name": "Underwater",
+  "glow": [
+    {
+      "radius": 0.02,
+      "intensity": 3.5,
+      "color": [
+        0.8,
+        1.0,
+        1.0
+      ],
+      "halo": 0.0
+    },
+    {
+      "radius": 0.1,
+      "intensity": 0.9,
+      "color": [
+        0.1,
+        0.7,
+        0.8
+      ],
+      "halo": 0.1
+    },
+    {
+      "radius": 0.4,
+      "intensity": 0.2,
+      "color": [
+        0.05,
+        0.5,
+        0.65
+      ],
+      "halo": 0.0
+    }
+  ],
+  "starburst": {
+    "rays": 24,
+    "length": 0.4,
+    "intensity": 0.35,
+    "color": [
+      0.4,
+      0.9,
+      1.0
+    ],
+    "sharp": 30,
+    "seed": 11
+  },
+  "ghosts": [
+    {
+      "pos": 0.5,
+      "size": 0.08,
+      "intensity": 0.1,
+      "color": [
+        0.3,
+        0.9,
+        0.9
+      ],
+      "shape": "ring",
+      "width": 0.15
+    },
+    {
+      "pos": 0.9,
+      "size": 0.05,
+      "intensity": 0.1,
+      "color": [
+        0.4,
+        1.0,
+        0.9
+      ],
+      "shape": "ring",
+      "width": 0.2
+    },
+    {
+      "pos": 1.4,
+      "size": 0.12,
+      "intensity": 0.07,
+      "color": [
+        0.2,
+        0.8,
+        0.9
+      ],
+      "softness": 0.6
+    }
+  ]
+}

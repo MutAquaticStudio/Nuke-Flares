@@ -1,0 +1,59 @@
+{
+  "name": "Stage Spotlight",
+  "glow": [
+    {
+      "radius": 0.03,
+      "intensity": 4.0,
+      "color": [
+        1.0,
+        1.0,
+        0.95
+      ],
+      "halo": 0.0
+    },
+    {
+      "radius": 0.15,
+      "intensity": 0.7,
+      "color": [
+        1.0,
+        0.95,
+        0.85
+      ],
+      "halo": 0.1
+    },
+    {
+      "radius": 0.5,
+      "intensity": 0.18,
+      "color": [
+        1.0,
+        0.9,
+        0.7
+      ],
+      "halo": 0.0
+    }
+  ],
+  "streak": {
+    "length": 0.35,
+    "thickness": 0.01,
+    "intensity": 0.9,
+    "color": [
+      1.0,
+      0.95,
+      0.85
+    ],
+    "angle": 90
+  },
+  "ghosts": [
+    {
+      "pos": 0.7,
+      "size": 0.12,
+      "intensity": 0.1,
+      "color": [
+        1.0,
+        0.95,
+        0.8
+      ],
+      "softness": 0.5
+    }
+  ]
+}

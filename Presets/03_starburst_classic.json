@@ -1,0 +1,37 @@
+{
+  "name": "Starburst Classic",
+  "glow": [
+    {
+      "radius": 0.01,
+      "intensity": 8.0,
+      "color": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "radius": 0.04,
+      "intensity": 0.7,
+      "color": [
+        1.0,
+        0.9,
+        0.7
+      ],
+      "halo": 0.04
+    }
+  ],
+  "starburst": {
+    "rays": 8,
+    "length": 0.6,
+    "intensity": 1.8,
+    "color": [
+      1.0,
+      0.95,
+      0.85
+    ],
+    "sharp": 700,
+    "seed": 7,
+    "rotation": 22.5
+  }
+}

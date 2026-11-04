@@ -1,0 +1,53 @@
+{
+  "name": "Diamond Star",
+  "glow": [
+    {
+      "radius": 0.006,
+      "intensity": 7.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "halo": 0.0
+    },
+    {
+      "radius": 0.025,
+      "intensity": 0.7,
+      "color": [
+        0.7,
+        0.85,
+        1.0
+      ],
+      "halo": 0.03
+    }
+  ],
+  "starburst": {
+    "rays": 6,
+    "length": 0.55,
+    "intensity": 2.2,
+    "color": [
+      0.85,
+      0.92,
+      1.0
+    ],
+    "sharp": 900,
+    "rotation": 0,
+    "seed": 2
+  },
+  "ghosts": [
+    {
+      "pos": 0.6,
+      "size": 0.02,
+      "intensity": 0.3,
+      "color": [
+        0.7,
+        0.85,
+        1.0
+      ],
+      "shape": "hex",
+      "sides": 6,
+      "softness": 0.15
+    }
+  ]
+}

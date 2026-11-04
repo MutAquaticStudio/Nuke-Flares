@@ -1,0 +1,71 @@
+{
+  "name": "Fire Orange",
+  "glow": [
+    {
+      "radius": 0.012,
+      "intensity": 6.0,
+      "color": [
+        1.0,
+        0.85,
+        0.5
+      ],
+      "halo": 0.0
+    },
+    {
+      "radius": 0.06,
+      "intensity": 1.1,
+      "color": [
+        1.0,
+        0.4,
+        0.05
+      ],
+      "halo": 0.09
+    },
+    {
+      "radius": 0.25,
+      "intensity": 0.2,
+      "color": [
+        1.0,
+        0.25,
+        0.0
+      ],
+      "halo": 0.0
+    }
+  ],
+  "starburst": {
+    "rays": 16,
+    "length": 0.28,
+    "intensity": 0.8,
+    "color": [
+      1.0,
+      0.6,
+      0.2
+    ],
+    "sharp": 220,
+    "seed": 9
+  },
+  "ghosts": [
+    {
+      "pos": 0.5,
+      "size": 0.04,
+      "intensity": 0.25,
+      "color": [
+        1.0,
+        0.45,
+        0.1
+      ],
+      "softness": 0.3
+    },
+    {
+      "pos": 1.0,
+      "size": 0.07,
+      "intensity": 0.18,
+      "color": [
+        1.0,
+        0.3,
+        0.05
+      ],
+      "softness": 0.35
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Soft Glow",
+  "glow": [
+    {
+      "radius": 0.02,
+      "intensity": 4.0,
+      "color": [
+        1.0,
+        0.97,
+        0.9
+      ]
+    },
+    {
+      "radius": 0.09,
+      "intensity": 0.9,
+      "color": [
+        1.0,
+        0.85,
+        0.6
+      ],
+      "halo": 0.1
+    },
+    {
+      "radius": 0.28,
+      "intensity": 0.25,
+      "color": [
+        1.0,
+        0.75,
+        0.5
+      ]
+    }
+  ]
+}
